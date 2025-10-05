@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cabeza campus quartett</title>
+    <meta name="description" content="Das cabeza campus quartett – Musik mit Herz aus Koblenz. Streichquartett für besondere Momente.">
+    <style>
+        /* ---------- Global ---------- */
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: justify;
+            background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('images/Campus_quartett_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        section {
+            padding: 2rem 1rem;
+            max-width: 900px;
+            margin: 0 auto 2rem auto;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #784f2b;
+            margin-bottom: 1rem;
+        }
+
+        /* ---------- Header ---------- */
+        .hero-header {
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+            padding: 1rem;
+        }
+
+        .logo-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ---------- Navigation ---------- */
+        nav {
+            background-color: rgba(120, 79, 43, 0.75);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            margin: 0.25rem 0.75rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* ---------- Mitglieder ---------- */
+        .members {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .member {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .member-img-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .member img {
+            width: 80px;
+            height: auto;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .member-img-container .copyright {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            font-size: 0.6rem;
+            color: #555;
+            background-color: rgba(255,255,255,0.6);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        .member-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .member-row .member {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        /* ---------- Media ---------- */
+        .media {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .media-item {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .media-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* ---------- Quadratische Videos ---------- */
+        .video-container {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .video-container .video-copyright {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            font-size: 0.6rem;
+            color: #fff;
+            background-color: rgba(0,0,0,0.5);
+            padding: 1px 3px;
+            border-radius: 3px;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            background-color: rgba(242, 242, 242, 0.85);
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        footer p:last-child {
+            font-size: 0.7rem;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 768px) {
+            .hero-header h1 { font-size: 1.5rem; }
+            nav a { margin: 0.25rem 0.5rem; font-size: 0.9rem; }
+            .member img { width: 60px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-header h1 { font-size: 1.3rem; }
+            .member img { width: 50px; }
+            nav { padding: 0.5rem; }
+            section { padding: 1.5rem 0.75rem; }
+            .member-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="hero-header">
+    <img src="images/Campus_quartett_header.jpg" alt="cabeza campus quartett Header" class="header-img">
+    <div class="header-overlay">
+        <div class="logo-title">
+            <img src="images/logo.png" alt="♫" class="logo">
+            <h4>www.campus-cabeza-quartett.de</h4>
+        </div>
+        <nav aria-label="Hauptnavigation">
+            <a href="#ueberuns">Über uns</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="#impressum">Impressum</a>
+        </nav>
+    </div>
+</header>
+
+<div style="height: 2rem;"></div>
+
+<!-- Startseite / Hero -->
+<section id="hero">
+    <p>„Herzensmomente mit Herzensmenschen sammeln“ beschreibt unser Quartett, unsere Probenarbeit und das Miteinander. Das <strong>cabeza campus quartett</strong> ist unser kleines, liebevolles Projekt neben Beruf, Studium und Alltag – die Stunden, in denen wir gemeinsam musizieren, sind für uns echte Auszeiten vom Alltag.</p>
+    <div class="media-item" style="margin: 0 auto; position: relative; max-width:600px;">
+        <img src="images/cabeza-campus-quartett_Auffuehrung.jpeg" alt="Herzensmomente mit Herzensmenschen" style="display:block; width:100%; height:auto; border-radius:8px;">
+        <span class="copyright" style="position:absolute; bottom:4px; right:4px; font-size:0.6rem; background-color: rgba(255,255,255,0.6); padding:0 2px; border-radius:2px;">© TessArt PHOTOGRAPHY</span>
+    </div>
+</section>
+
+<!-- Unsere Geschichte -->
+<section id="geschichte">
+    <h2>Unsere Geschichte</h2>
+    <p>Musik begleitet uns seit unserer Kindheit – wir machen alle schon lange Musik; solistisch, im Orchester und in verschiedenen Ensembles. Gegründet haben wir uns im <strong>September 2022 </strong>an der Universität Koblenz, und schnell wurde klar: Streichquartett verbindet. Schlussendlich hat uns dann noch die Musik in der Serie Bridgerton dazu bewegt, moderne Stücke auf unseren klassischen Instrumenten auszuprobieren und damit wurden Kindheitsträume wahr. Aus unserer gemeinsamen Leidenschaft ist das <strong>cabeza campus quartett</strong> entstanden. Wir lieben es, Menschen mit unserer Musik zu berühren und den Alltag für ein paar Minuten hinter uns zu lassen. Das ist unser Antrieb – das sind wir.</p>
+</section>
+
+<!-- Über uns -->
+<section id="ueberuns">
+    <h2>Über uns</h2>
+    <p>Quartett ist unsere Leidenschaft. Auch wenn wir gelegentlich als Trio auftreten, besteht unsere <strong>Stammbesetzung</strong> aus:</p>
+    <div class="members">
+        <div class="member">
+            <div class="member-img-container">
+                <img src="images/cabeza-campus-quartett_Sophie.jpeg" alt="Sophie">
+                <span class="copyright">© Manawanani</span>
+            </div>
+            <div><strong>Sophie – Violine I</strong></div>
+        </div>
+
+        <div class="member-row">
+            <div class="member">
+                <div class="member-img-container">
+                    <img src="images/cabeza-campus-quartett_Philipp.jpeg" alt="Philipp">
+                    <span class="copyright">© TessArt</span>
+                </div>
+                <div><strong>Philipp – Violine II</strong></div>
+            </div>
+            <div class="member">
+                <div class="member-img-container">
+                    <img src="images/cabeza-campus-quartett_Elena.jpeg" alt="Elena">
+                    <span class="copyright">© Manawanani</span>
+                </div>
+                <div><strong>Elena – Violine II</strong></div>
+            </div>
+        </div>
+
+        <div class="member-row">
+            <div class="member">
+                <div class="member-img-container">
+                    <img src="images/cabeza-campus-quartett_David.jpeg" alt="David">
+                    <span class="copyright">© TessArt</span>
+                </div>
+                <div><strong>David – Viola</strong></div>
+            </div>
+            <div class="member">
+                <div class="member-img-container">
+                    <img src="images/cabeza-campus-quartett_Constantin.jpg" alt="Constantin">
+                    <span class="copyright">© Manawanani</span>
+                </div>
+                <div><strong>Constantin – Viola</strong></div>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="member-img-container">
+                <img src="images/cabeza-campus-quartett_Maren.jpeg" alt="Maren">
+                <span class="copyright">© Manawanani</span>
+            </div>
+            <div><strong>Maren – Violoncello</strong></div>
+        </div>
+    </div>
+</section>
+
+<!-- Repertoire -->
+<section id="repertoire">
+    <h2>Repertoire</h2>
+    <p>Unser musikalischer Bogen reicht von klassischer Musik über Popsong-Arrangements bis hin zu Tangos – wie dem berühmten <em>„Por Una Cabeza“</em>, der uns auch zu unserem Namen <strong>cabeza campus quartett</strong> inspiriert hat.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:2rem;">
+        <ul style="flex:1; min-width:200px;">
+            <li>Viva la vida (Coldplay)</li>
+            <li>Perfect (Ed Sheeran)</li>
+            <li>Hallelujah (Leonard Cohen)</li>
+            <li>High (Lighthouse Family)</li>
+            <li>Havana (Camila Cabello)</li>
+            <li>As it was (Harry Styles)</li>
+            <li>uvm.</li>
+        </ul>
+        <ul style="flex:1; min-width:200px;">
+            <li>Por Una Cabeza (Carlos Gardel)</li>
+            <li>Eine kleine Nachtmusik (Mozart K525)</li>
+            <li>Quartet No. 3 in G Major (Mozart K156)</li>
+            <li>Quartet No. 21 in D Major (Mozart K575)</li>
+            <li>Libertango (Astor Piazolla)</li>
+            <li>uvm.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Eindrücke -->
+<section id="eindruecke">
+    <h2>Eindrücke</h2>
+    <p>Gerne senden wir Euch Einblicke in unsere Musik: Videos und Klangmomente aus einer Probe vor einer freien Trauung, die unser Zusammenspiel und unsere Leidenschaft zeigen. Fragt Klang- und Hörbeispiele einfach bei uns an!</p>
+    </div>
+    </div>
+</section>
+
+
+
+<!-- Kontakt -->
+<section id="kontakt">
+    <h2>Kontakt & Booking</h2>
+    <p>Ihr plant ein Fest oder eine Feier und sucht noch nach der passenden Musik für Euer Event? Wir spielen aus unserem Stammrepertoire, helfen bei der Musikauswahl, musizieren aber auch Eure Wuschstücke.</p>
+    <p>Wir freuen uns auf den Austausch mit Euch!</p>
+    <p><strong>E-Mail:</strong> <a href="mailto:ccabeza-campus-quartett@web.de">cabeza-campus-quartett@web.de</a></p>
+</section>
+
+<!-- Eure Stimmen -->
+<!-- Eure Stimmen unter Footer -->
+<section id="eure-stimmen" style="padding:3rem 1rem; margin-top:2rem;">
+    <h2 style="text-align:left; color:#784f2b; text-shadow:none;">Eure Stimmen</h2>
+     </p>
+    <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:flex-start;">
+        <div style="flex:1; min-width:250px; background-color: rgba(255,255,255,0.85); color:#333; padding:1.5rem; border-radius:8px; text-align:left;">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+                <img src="images/Campus_quartett_background_feedbackbox_1.jpg" alt="Marion & Heiko" style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
+                <strong>Marion & Heiko</strong>
+            </div>
+            <p>„Die Musik von cabeza campus quartett hat unsere Hochzeit unvergesslich gemacht. Jeder Moment war magisch.“</p>
+        </div>
+
+        <div style="flex:1; min-width:250px; background-color: rgba(255,255,255,0.85); color:#333; padding:1.5rem; border-radius:8px; text-align:left;">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+                <img src="images/Campus_quartett_background_feedbackbox_2.jpg" alt="M. & H." style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
+                <strong>M. & H.</strong>
+            </div>
+            <p>„Professionell, herzlich und voller Leidenschaft. Wir haben das Quartett für unsere Firmenfeier gebucht und waren begeistert.“</p>
+        </div>
+
+        <div style="flex:1; min-width:250px; background-color: rgba(255,255,255,0.85); color:#333; padding:1.5rem; border-radius:8px; text-align:left;">
+            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.5rem;">
+                <img src="images/Campus_quartett_background_feedbackbox_3.jpg" alt="Organisationsteam" style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
+                <strong>Organisationsteam Veranstaltungen Universität Koblenz</strong>
+            </div>
+            <p>„Wir möchten uns ganz herzlich bei Ihnen und dem Ensemble für die wunderbare musikalische Begleitung bedanken. Ihre Auftritte, die sorgfältig ausgewählte Musik und die angenehme Zusammenarbeit haben die Veranstaltung sehr bereichert!“</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer>
+  <div style="display:inline-flex; align-items:center; gap:1rem;">
+    <div style="text-align:center;">
+        <p>cabeza campus quartett – Musik mit Herz</p>
+        <p><strong>E-Mail:</strong> <a href="mailto:cabeza-campus-quartett@web.de">cabeza-campus-quartett@web.de</a></p>
+        <p>© cabeza campus quartett</p>
+     </div>
+</footer>
+
+<!-- Impressum -->
+<section id="impressum" style="margin-top:2rem; padding-top:2rem; border-top:1px solid #ccc;">
+    <h2>Impressum</h2>
+    <p><strong>Name / Betreiber:</strong><br>
+       cabeza campus quartett</p>
+    <p><strong>Adresse:</strong><br>
+       Beispielstraße 7<br>
+       56068 Koblenz<br>
+       Deutschland</p>
+    <p><strong>Kontakt:</strong><br>
+       E-Mail: <a href="mailto:cabeza-campus-quartett@web.de">cabeza-campus-quartett@web.de</a></p>
+    <p><strong>Plattform zur Online-Streitbeilegung:</strong><br>
+       <a href="https://ec.europa.eu/odr" target="_blank">https://ec.europa.eu/odr</a></p>
+    <p>Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle nicht verpflichtet, hierzu jedoch grundsätzlich bereit.</p>
+    <p><strong>Haftung für Inhalte:</strong><br>
+       Als Betreiber dieser Website übernehmen wir keine Haftung für die Richtigkeit, Vollständigkeit oder Aktualität der Inhalte. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für externe Links.</p>
+    <p><strong>Haftung für Links:</strong><br>
+       Für Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich.</p>
+    <p><strong>Urheberrecht:</strong><br>
+       Alle Texte, Bilder, Videos und sonstige Inhalte dieser Website sind urheberrechtlich geschützt. Eine Vervielfältigung oder Nutzung außerhalb der Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung des cabeza campus quartett.</p>
+</section>
+
+</body>
+</html>
